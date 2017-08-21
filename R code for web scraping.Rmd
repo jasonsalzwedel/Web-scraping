@@ -1,0 +1,27 @@
+---
+title: "Web Scraping"
+author: "Jason Salzwedel SLZJAS001"
+date: "20 August 2017"
+output: html_document
+---
+
+```{r }
+library(rvest)
+library(tidyverse)
+library(stringr)
+install.packages("tidyverse", dependencies = TRUE)
+library(tidyverse)
+
+
+```
+
+```{r }
+
+web_elements <- html_nodes(x = web_page, css = "table")
+web_elements
+web_table <- html_table(web_elements[[2]])
+print(web_table)
+
+
+
+```
